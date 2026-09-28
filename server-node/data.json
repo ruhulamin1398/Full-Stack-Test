@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Write project proposal updated title",
+    "completed": true,
+    "createdAt": "2026-09-28T10:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "Review pull request",
+    "completed": false,
+    "createdAt": "2026-09-28T07:36:33.243Z"
+  },
+  {
+    "id": 3,
+    "title": "Review pull request",
+    "completed": false,
+    "createdAt": "2026-09-28T07:39:15.697Z"
+  }
+]

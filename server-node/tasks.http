@@ -1,0 +1,70 @@
+@base = http://localhost:3001
+
+### Health
+GET {{base}}/api/health
+
+### List all tasks
+GET {{base}}/api/tasks
+
+### List completed
+GET {{base}}/api/tasks?status=completed
+
+### List pending
+GET {{base}}/api/tasks?status=pending
+
+### Invalid status
+GET {{base}}/api/tasks?status=done
+
+### Create task
+POST {{base}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Review pull request"
+}
+
+### Create task with empty title
+POST {{base}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "   "
+}
+
+### Update title
+PATCH {{base}}/api/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Write project proposal updated title"
+}
+
+### Mark completed
+PATCH {{base}}/api/tasks/1
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+### Empty title on update
+PATCH {{base}}/api/tasks/1
+Content-Type: application/json
+
+{
+  "title": ""
+}
+
+### Missing task
+PATCH {{base}}/api/tasks/999
+Content-Type: application/json
+
+{
+  "completed": false
+}
+
+### Delete task
+DELETE {{base}}/api/tasks/1
+
+### Delete missing task
+DELETE {{base}}/api/tasks/999
